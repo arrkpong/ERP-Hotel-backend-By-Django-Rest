@@ -1,0 +1,7 @@
+<!-- rooms/templates/rooms/room_list.html -->
+<h1>Room List</h1>
+<ul>
+    {% for room in rooms %}
+        <li>{{ room.room_number }} - {{ room.room_type }} - ${{ room.price }} - {% if room.is_available %}Available{% else %}Not Available{% endif %}</li>
+    {% endfor %}
+</ul>
