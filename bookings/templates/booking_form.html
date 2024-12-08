@@ -1,0 +1,69 @@
+{% extends 'base_generic.html' %}
+{% load static widget_tweaks %}
+{% block title %}Booking Form{% endblock %}
+
+{% block content %}
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="{% static 'css/booking_form.css' %}">
+    
+    <div class="container mt-4">
+        <h1 class="mb-4">{% if form.instance.pk %}Edit Booking{% else %}New Booking{% endif %}</h1>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="card p-4">
+                <div class="form-group mb-3">
+                    <label for="{{ form.guest.id_for_label }}" class="form-label">{{ form.guest.label }}</label>
+                    {{ form.guest|add_class:"form-control" }}
+                    {% if form.guest.help_text %}
+                        <small class="form-text text-muted">{{ form.guest.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="form-group mb-3">
+                    <label for="{{ form.room.id_for_label }}" class="form-label">{{ form.room.label }}</label>
+                    {{ form.room|add_class:"form-control" }}
+                    {% if form.room.help_text %}
+                        <small class="form-text text-muted">{{ form.room.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="form-group mb-3">
+                    <label for="{{ form.check_in.id_for_label }}" class="form-label">{{ form.check_in.label }}</label>
+                    {{ form.check_in|add_class:"form-control" }}
+                    {% if form.check_in.help_text %}
+                        <small class="form-text text-muted">{{ form.check_in.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="form-group mb-3">
+                    <label for="{{ form.check_out.id_for_label }}" class="form-label">{{ form.check_out.label }}</label>
+                    {{ form.check_out|add_class:"form-control" }}
+                    {% if form.check_out.help_text %}
+                        <small class="form-text text-muted">{{ form.check_out.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="form-group mb-3">
+                    <label for="{{ form.cancellation_fee.id_for_label }}" class="form-label">{{ form.cancellation_fee.label }}</label>
+                    {{ form.cancellation_fee|add_class:"form-control" }}
+                    {% if form.cancellation_fee.help_text %}
+                        <small class="form-text text-muted">{{ form.cancellation_fee.help_text }}</small>
+                    {% endif %}
+                </div>
+                <div class="form-group mb-3">
+                    <label for="{{ form.refundable.id_for_label }}" class="form-label">{{ form.refundable.label }}</label>
+                    {{ form.refundable|add_class:"form-control" }}
+                    {% if form.refundable.help_text %}
+                        <small class="form-text text-muted">{{ form.refundable.help_text }}</small>
+                    {% endif %}
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-save"></i> Save
+                    </button>
+                    <a href="{% url 'booking_list' %}" class="btn btn-secondary">
+                        <i class="bi bi-x-circle"></i> Cancel
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

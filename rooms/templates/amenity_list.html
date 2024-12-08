@@ -1,0 +1,36 @@
+{% extends 'base_generic.html' %}
+{% load static %} <!-- Load the static files tag -->
+{% block title %}Amenity List{% endblock %}
+
+{% block content %}
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="{% static 'css/amenity_list.css' %}">
+    
+    <div class="container mt-4">
+        <h1 class="mb-4">Amenity List</h1>
+        
+        <!-- Add New Amenity button -->
+        <a href="{% url 'amenity_create' %}" class="btn btn-primary mb-3">
+            <i class="bi bi-plus-circle"></i> Add New Amenity
+        </a>
+
+        <!-- Amenity List -->
+        <ul class="list-group">
+            {% for amenity in amenities %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="{% url 'amenity_detail' pk=amenity.pk %}" class="text-decoration-none">
+                        {{ amenity.name }}
+                    </a>
+                    <span>
+                        <a href="{% url 'amenity_edit' pk=amenity.pk %}" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i> Edit
+                        </a>
+                        <a href="{% url 'amenity_delete' pk=amenity.pk %}" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Delete
+                        </a>
+                    </span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,48 @@
+/* Custom CSS for Confirm Room Deletion page */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.75rem;
+    color: #dc3545;
+    margin-bottom: 20px;
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px 15px;
+}
+
+button i {
+    margin-right: 5px;
+}
+
+/* Button Styles */
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* Margin for the cancel button */
+.mt-3 {
+    margin-top: 1rem;
+}

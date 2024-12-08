@@ -1,0 +1,67 @@
+/* Custom CSS for Room Details */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #343a40;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #495057;
+}
+
+ul.list-group {
+    margin-top: 1rem;
+}
+
+ul.list-group-item {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+ul.list-group-item i {
+    margin-right: 10px;
+    color: #28a745;
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px 15px;
+}
+
+button i {
+    margin-right: 5px;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}

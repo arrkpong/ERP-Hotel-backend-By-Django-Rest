@@ -1,0 +1,27 @@
+{% extends 'base_generic.html' %}
+{% load static %} <!-- Load the static files tag -->
+{% block title %}Bookings{% endblock %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/booking_list.css' %}">
+    
+    <h1 class="mb-4">Bookings</h1>
+    <a href="{% url 'booking_create' %}" class="btn btn-primary mb-3">
+        <i class="bi bi-plus-circle"></i> Create New Booking
+    </a>
+    
+    <ul class="list-group">
+        {% for booking in bookings %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="{% url 'booking_detail' pk=booking.pk %}">
+                    Booking {{ booking.id }} by {{ booking.guest.full_name }}
+                </a>
+                <span>
+                    <a href="{% url 'booking_edit' pk=booking.pk %}" class="btn btn-warning btn-sm">
+                        <i class="bi bi-pencil-square"></i> Edit
+                    </a>
+                </span>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

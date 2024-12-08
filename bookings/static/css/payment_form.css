@@ -1,0 +1,52 @@
+/* payment_form.css */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.payment-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.payment-form .form-group {
+    margin-bottom: 20px;
+}
+
+.payment-form button {
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.payment-form .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.payment-form .btn-secondary {
+    width: 100%;
+    text-align: center;
+}
+
+.payment-form .btn i {
+    margin-right: 8px;
+}
+
+.payment-form .form-control {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+a.btn-secondary {
+    margin-top: 10px;
+}

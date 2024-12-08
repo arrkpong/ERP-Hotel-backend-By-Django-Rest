@@ -1,0 +1,33 @@
+{% extends 'base_generic.html' %}
+{% load static %} <!-- Load the static files tag -->
+{% block title %}Guest List{% endblock %}
+
+{% block content %}
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="{% static 'css/guest_list.css' %}">
+    
+    <div class="container mt-4">
+        <h1 class="mb-4">Guest List</h1>
+        <a href="{% url 'guest_create' %}" class="btn btn-primary mb-3">
+            <i class="bi bi-person-plus"></i> Add New Guest
+        </a>
+        
+        <ul class="list-group">
+            {% for guest in guests %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <a href="{% url 'guest_detail' pk=guest.pk %}" class="text-decoration-none">
+                        {{ guest.full_name }}
+                    </a>
+                    <span>
+                        <a href="{% url 'guest_edit' pk=guest.pk %}" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil-square"></i> Edit
+                        </a>
+                        <a href="{% url 'guest_delete' pk=guest.pk %}" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i> Delete
+                        </a>
+                    </span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

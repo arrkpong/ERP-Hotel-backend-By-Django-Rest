@@ -1,0 +1,44 @@
+/* booking_list.css */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #007bff;
+    text-align: center;
+}
+
+ul.list-group {
+    margin-top: 20px;
+}
+
+ul.list-group .list-group-item {
+    font-size: 1.1rem;
+    padding: 15px;
+}
+
+ul.list-group .list-group-item a {
+    text-decoration: none;
+    color: #343a40;
+}
+
+ul.list-group .list-group-item a:hover {
+    color: #007bff;
+}
+
+ul.list-group .list-group-item .btn {
+    margin-left: 10px;
+}
+
+ul.list-group .list-group-item .btn i {
+    margin-right: 5px;
+}
+
+a.btn-primary {
+    font-size: 1rem;
+}
+
+a.btn-warning {
+    font-size: 0.9rem;
+}

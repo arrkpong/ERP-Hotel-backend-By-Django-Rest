@@ -1,0 +1,55 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+{% block title %}Guest Details{% endblock %}
+
+{% block content %}
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="{% static 'css/guest_detail.css' %}">
+    
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">{{ guest.full_name }}</h1>
+        
+        <!-- Contact Information -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title">Contact Information</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>Email:</strong> {{ guest.email }}</p>
+                <p><strong>Phone:</strong> {{ guest.phone }}</p>
+            </div>
+        </div>
+
+        <!-- Identification -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title">Identification</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>ID Card:</strong> {{ guest.id_card_number }}</p>
+                <p><strong>Address:</strong> {{ guest.address }}</p>
+            </div>
+        </div>
+
+        <!-- Record Information -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title">Record Information</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>Created At:</strong> {{ guest.created_at|date:"F j, Y, g:i a" }}</p>
+                <p><strong>Updated At:</strong> {{ guest.updated_at|date:"F j, Y, g:i a" }}</p>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="d-flex justify-content-between mt-4">
+            <a href="{% url 'guest_edit' pk=guest.pk %}" class="btn btn-warning">
+                <i class="bi bi-pencil"></i> Edit
+            </a>
+            <a href="{% url 'guest_list' %}" class="btn btn-secondary">
+                <i class="bi bi-arrow-left-circle"></i> Back to List
+            </a>
+        </div>
+    </div>
+{% endblock %}

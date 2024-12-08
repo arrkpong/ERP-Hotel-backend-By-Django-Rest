@@ -1,0 +1,31 @@
+/* Custom Styles for Booking Details Page */
+.container {
+    max-width: 960px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card {
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.list-group-item {
+    font-size: 1.1rem;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}

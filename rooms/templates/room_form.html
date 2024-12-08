@@ -1,0 +1,58 @@
+{% extends 'base_generic.html' %}
+{% load static widget_tweaks %} <!-- Load static files and widget tweaks -->
+{% block title %}Room Form{% endblock %}
+
+{% block content %}
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="{% static 'css/room_form.css' %}">
+    
+    <div class="container mt-4">
+        <h1>{% if form.instance.pk %}Edit Room{% else %}New Room{% endif %}</h1>
+
+        <form method="post" class="form-room">
+            {% csrf_token %}
+            
+            <!-- Room Form Fields with widget tweaks and labels -->
+            <div class="mb-3">
+                <label for="{{ form.number.id_for_label }}" class="form-label">{{ form.number.label }}</label>
+                {{ form.number|add_class:"form-control" }}
+                <small class="form-text text-muted">{{ form.number.help_text }}</small> <!-- Display help_text -->
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.type.id_for_label }}" class="form-label">{{ form.type.label }}</label>
+                {{ form.type|add_class:"form-control" }}
+                <small class="form-text text-muted">{{ form.type.help_text }}</small> <!-- Display help_text -->
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.status.id_for_label }}" class="form-label">{{ form.status.label }}</label>
+                {{ form.status|add_class:"form-control" }}
+                <small class="form-text text-muted">{{ form.status.help_text }}</small> <!-- Display help_text -->
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.price_per_night.id_for_label }}" class="form-label">{{ form.price_per_night.label }}</label>
+                {{ form.price_per_night|add_class:"form-control" }}
+                <small class="form-text text-muted">{{ form.price_per_night.help_text }}</small> <!-- Display help_text -->
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.size.id_for_label }}" class="form-label">{{ form.size.label }}</label>
+                {{ form.size|add_class:"form-control" }}
+                <small class="form-text text-muted">{{ form.size.help_text }}</small> <!-- Display help_text -->
+            </div>
+            <div class="mb-3">
+                <label for="{{ form.amenities.id_for_label }}" class="form-label">{{ form.amenities.label }}</label>
+                <!-- Render amenities as checkboxes -->
+                {{ form.amenities }}
+                <small class="form-text text-muted">{{ form.amenities.help_text }}</small> <!-- Display help_text -->
+            </div>
+
+            <!-- Save Button -->
+            <button type="submit" class="btn btn-success">
+                <i class="bi bi-save"></i> Save
+            </button>
+        </form>
+
+        <a href="{% url 'room_list' %}" class="btn btn-secondary mt-3">
+            <i class="bi bi-arrow-left"></i> Back to List
+        </a>
+    </div>
+{% endblock %}

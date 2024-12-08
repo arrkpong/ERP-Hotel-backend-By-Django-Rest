@@ -1,0 +1,55 @@
+/* Custom CSS for Guest Details */
+.container {
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.card-body {
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+.card-body p {
+    margin-bottom: 15px;
+}
+
+.card-body strong {
+    font-weight: 600;
+}
+
+.d-flex a {
+    width: auto;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn i {
+    margin-right: 5px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Optional: Adjust the width of buttons */
+.btn {
+    max-width: 200px;
+}

@@ -1,0 +1,51 @@
+/* Custom CSS for Delete Staff Confirmation */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    width: 200px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.text-center {
+    margin-top: 20px;
+}
+
+/* Icon styling */
+i.bi-trash-fill {
+    margin-right: 8px;
+}
+
+i.bi-arrow-left-circle {
+    margin-right: 8px;
+}

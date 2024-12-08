@@ -1,0 +1,81 @@
+{% extends 'base_generic.html' %}
+{% load static %}
+{% block title %}Booking Details{% endblock %}
+
+{% block content %}
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="{% static 'css/booking_detail.css' %}">
+    
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Booking Details #{{ booking.id }}</h1>
+        
+        <!-- Guest and Room Information -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title">Guest and Room</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>Guest:</strong> {{ booking.guest.full_name }}</p>
+                <p><strong>Room:</strong> {{ booking.room.room_number|default:"No room assigned" }}</p>
+            </div>
+        </div>
+
+        <!-- Booking Dates and Refundable Status -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title">Booking Dates</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>Check-in:</strong> {{ booking.check_in }}</p>
+                <p><strong>Check-out:</strong> {{ booking.check_out }}</p>
+                <p><strong>Refundable:</strong> 
+                    {% if booking.refundable %}
+                        <span class="badge bg-success">Yes</span>
+                    {% else %}
+                        <span class="badge bg-danger">No</span>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+
+        <!-- Created At and Updated At -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title">Record Information</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>Created At:</strong> {{ booking.created_at|date:"d M Y, H:i" }}</p>
+                <p><strong>Updated At:</strong> {{ booking.updated_at|date:"d M Y, H:i" }}</p>
+            </div>
+        </div>
+
+        <!-- Payments Section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h5 class="card-title">Payments</h5>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    {% for payment in payments %}
+                        <li class="list-group-item">
+                            <i class="bi bi-credit-card"></i> {{ payment.payment_method }} 
+                            - <strong>{{ payment.amount_paid }}</strong> on {{ payment.payment_date }}
+                        </li>
+                    {% empty %}
+                        <li class="list-group-item text-muted">No payments recorded.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="d-flex justify-content-between mt-4">
+            <a href="{% url 'payment_create' booking_pk=booking.pk %}" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> Add Payment
+            </a>
+            <a href="{% url 'booking_list' %}" class="btn btn-secondary">
+                <i class="bi bi-arrow-left-circle"></i> Back to List
+            </a>
+        </div>
+    </div>
+{% endblock %}
