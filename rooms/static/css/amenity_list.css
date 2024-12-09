@@ -2,20 +2,28 @@
 .container {
     max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 2rem;
-    color: #343a40;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 a {
-    color: #007bff;
+    color: #1d9bf0;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #0056b3;
+    color: #0d6efd;
     text-decoration: underline;
 }
 
@@ -26,19 +34,27 @@ a:hover {
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 10px;
+    background-color: #f8f9fa;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .list-group-item:hover {
-    background-color: #f8f9fa;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #e9ecef;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
 }
 
 .list-group-item a {
     font-weight: bold;
+    color: #333333;
 }
 
 .btn {
     margin-left: 5px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn i {
@@ -46,33 +62,36 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #1d9bf0;
+    border: none;
+    color: white;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
+    background-color: #0d6efd;
+    transform: scale(1.05);
 }
 
 .btn-warning {
     background-color: #ffc107;
-    border-color: #ffc107;
+    border: none;
+    color: #212529;
 }
 
 .btn-warning:hover {
     background-color: #e0a800;
-    border-color: #d39e00;
+    transform: scale(1.05);
 }
 
 .btn-danger {
     background-color: #dc3545;
-    border-color: #dc3545;
+    border: none;
+    color: white;
 }
 
 .btn-danger:hover {
     background-color: #c82333;
-    border-color: #bd2130;
+    transform: scale(1.05);
 }
 
 /* Button for Add New Amenity */
@@ -80,11 +99,14 @@ a:hover {
     font-size: 1.2rem;
     color: white;
     background-color: #28a745;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .add-amenity:hover {
     background-color: #218838;
+    transform: scale(1.05);
 }

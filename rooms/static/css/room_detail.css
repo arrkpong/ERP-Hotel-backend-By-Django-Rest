@@ -2,43 +2,70 @@
 .container {
     max-width: 900px;
     margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
     color: #343a40;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: #343a40;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
 }
 
 p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
     color: #495057;
+    line-height: 1.6;
 }
 
 ul.list-group {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    padding: 0;
+    list-style: none;
 }
 
 ul.list-group-item {
-    font-size: 1rem;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+ul.list-group-item:hover {
+    background-color: #e9ecef;
 }
 
 ul.list-group-item i {
-    margin-right: 10px;
+    margin-right: 15px;
     color: #28a745;
+    font-size: 1.2rem;
 }
 
 button {
     font-size: 1rem;
-    padding: 10px 15px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 button i {
@@ -47,21 +74,54 @@ button i {
 
 /* Button Styles */
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #1d9bf0;
+    border: none;
+    color: white;
+    font-weight: bold;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
+    background-color: #0d6efd;
+    transform: scale(1.05);
 }
 
 .btn-secondary {
     background-color: #6c757d;
-    border-color: #6c757d;
+    border: none;
+    color: white;
+    font-weight: bold;
 }
 
 .btn-secondary:hover {
     background-color: #5a6268;
-    border-color: #545b62;
+    transform: scale(1.05);
+}
+
+/* Additional Styling */
+.details-section {
+    margin-bottom: 30px;
+}
+
+.details-section p {
+    font-style: italic;
+}
+
+.details-section ul {
+    margin-left: 20px;
+}
+
+/* Add subtle fade-in effect */
+.container {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
