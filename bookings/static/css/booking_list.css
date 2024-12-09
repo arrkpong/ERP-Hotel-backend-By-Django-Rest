@@ -1,26 +1,47 @@
 /* booking_list.css */
 body {
     font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #007bff;
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 ul.list-group {
     margin-top: 20px;
+    padding-left: 0;
+    list-style-type: none;
 }
 
 ul.list-group .list-group-item {
     font-size: 1.1rem;
     padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul.list-group .list-group-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 ul.list-group .list-group-item a {
     text-decoration: none;
     color: #343a40;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 ul.list-group .list-group-item a:hover {
@@ -29,16 +50,37 @@ ul.list-group .list-group-item a:hover {
 
 ul.list-group .list-group-item .btn {
     margin-left: 10px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 ul.list-group .list-group-item .btn i {
     margin-right: 5px;
 }
 
+/* Button Styles */
 a.btn-primary {
-    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+a.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
 a.btn-warning {
-    font-size: 0.9rem;
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+a.btn-warning:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
 }
