@@ -35,6 +35,9 @@
         </nav>
 
         {% block content %}
+            <!-- Link to custom CSS file -->
+            <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+            <br>
             <h1 class="text-center mb-4">Welcome to ERP Hotel System</h1>
             <p class="text-center mb-5">Manage bookings, rooms, guests, and staff with ease.</p>
             <div class="row">

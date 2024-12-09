@@ -84,3 +84,17 @@ a.btn-warning:hover {
     background-color: #e0a800;
     transform: scale(1.05);
 }
+
+.btn-success {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn-success:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+    transform: scale(1.05);
+}
