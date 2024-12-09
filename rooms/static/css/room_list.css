@@ -1,4 +1,21 @@
 /* Custom CSS for Room List Page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Container Style */
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -8,127 +25,100 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    font-size: 2.5rem;
-    color: #343a40;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-weight: bold;
-    text-transform: uppercase;
+/* List Group */
+ul.list-group {
+    margin-top: 20px;
+    padding-left: 0;
+    list-style-type: none;
 }
 
-a {
-    color: #007bff;
+ul.list-group .list-group-item {
+    font-size: 1.1rem;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul.list-group .list-group-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+ul.list-group .list-group-item a {
     text-decoration: none;
+    color: #343a40;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
+ul.list-group .list-group-item a:hover {
+    color: #007bff;
 }
 
-.list-group-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #f8f9fa;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+ul.list-group .list-group-item .btn {
+    margin-left: 10px;
+    font-size: 1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.list-group-item:hover {
-    background-color: #e9ecef;
-    transform: translateY(-2px);
-}
-
-.list-group-item a {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #495057;
-}
-
-.btn {
-    margin-left: 5px;
-    font-size: 0.9rem;
-    font-weight: bold;
-    padding: 10px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn i {
+ul.list-group .list-group-item .btn i {
     margin-right: 5px;
 }
 
 /* Button Styles */
-.btn-primary {
+a.btn-primary {
     background-color: #007bff;
-    border: none;
     color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-.btn-primary:hover {
+a.btn-primary:hover {
     background-color: #0056b3;
     transform: scale(1.05);
 }
 
-.btn-warning {
+a.btn-warning {
     background-color: #ffc107;
-    border: none;
     color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
 }
 
-.btn-warning:hover {
+a.btn-warning:hover {
     background-color: #e0a800;
     transform: scale(1.05);
 }
 
-.btn-danger {
-    background-color: #dc3545;
-    border: none;
-    color: white;
-}
-
-.btn-danger:hover {
-    background-color: #c82333;
-    transform: scale(1.05);
-}
-
-/* Button for Add New Room */
-.add-room {
-    font-size: 1.2rem;
-    color: white;
-    background-color: #28a745;
-    padding: 12px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.add-room:hover {
-    background-color: #218838;
-    transform: scale(1.05);
-}
-
-/* Add subtle fade-in effect */
-.container {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    ul.list-group .list-group-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+    .add-room {
+        font-size: 1rem;
+        width: 100%;
+        padding: 10px 15px;
     }
 }

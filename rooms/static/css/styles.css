@@ -1,0 +1,263 @@
+/* General Container Styles */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* List Items */
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.list-group-item a {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+/* Button Styles */
+.btn {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn i {
+    margin-right: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Button for Add New Room */
+.add-room {
+    font-size: 1.2rem;
+    color: white;
+    background-color: #28a745;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-room:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Form Styles */
+form {
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form .mb-3 {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-control {
+    height: 45px;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 5px rgba(38, 143, 255, 0.3);
+    outline: none;
+}
+
+/* Back to List Button */
+a.btn {
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.5rem;
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a.btn:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+/* Confirmation Page */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #dc3545;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555555;
+    margin-bottom: 25px;
+}
+
+button {
+    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button i {
+    margin-right: 5px;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .list-group-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+    .add-room {
+        font-size: 1rem;
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+}

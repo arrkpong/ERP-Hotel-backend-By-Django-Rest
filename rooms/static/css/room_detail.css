@@ -125,3 +125,32 @@ button i {
         transform: translateY(0);
     }
 }
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    ul.list-group-item {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+}
