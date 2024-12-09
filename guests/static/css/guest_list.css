@@ -1,127 +1,86 @@
-/* Global Styles */
+/* booking_list.css */
 body {
-    background-color: #f8f9fa;
     font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
 }
 
-/* Container Style */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Heading Style */
 h1 {
     font-size: 2.5rem;
-    font-weight: bold;
-    color: #343a40;
+    color: #007bff;
+    text-align: center;
+    margin-top: 30px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
-/* List Group Item Style */
-.list-group-item {
-    font-size: 1.2rem;
+ul.list-group {
+    margin-top: 20px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+ul.list-group .list-group-item {
+    font-size: 1.1rem;
     padding: 15px;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.list-group-item:hover {
-    background-color: #f1f1f1;
+ul.list-group .list-group-item:hover {
     transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Link Style */
-.list-group-item a {
-    color: #007bff;
+ul.list-group .list-group-item a {
     text-decoration: none;
+    color: #343a40;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.list-group-item a:hover {
-    text-decoration: underline;
+ul.list-group .list-group-item a:hover {
+    color: #007bff;
 }
 
-/* Button Styles */
-.btn-sm {
-    margin-left: 5px;
-}
-
-.btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: white;
+ul.list-group .list-group-item .btn {
+    margin-left: 10px;
+    font-size: 1rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
-    transform: scale(1.05);
-}
-
-.btn-warning {
-    background-color: #ffc107;
-    border-color: #ffc107;
-    color: white;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-warning:hover {
-    background-color: #e0a800;
-    border-color: #d39e00;
-    transform: scale(1.05);
-}
-
-.btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    color: white;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-danger:hover {
-    background-color: #c82333;
-    border-color: #bd2130;
-    transform: scale(1.05);
-}
-
-/* Icon Inside Buttons */
-.btn i {
+ul.list-group .list-group-item .btn i {
     margin-right: 5px;
 }
 
-/* General Button Hover Effect */
-.btn:hover {
-    opacity: 0.9;
-}
-
-/* Optional: Adjust Button Sizes */
-.btn {
+/* Button Styles */
+a.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
     padding: 10px 20px;
-    font-size: 1rem;
     border-radius: 5px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
+a.btn-primary:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
 
-    h1 {
-        font-size: 2rem;
-    }
+a.btn-warning {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
 
-    .list-group-item {
-        font-size: 1rem;
-    }
-
-    .btn {
-        font-size: 0.9rem;
-    }
+a.btn-warning:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
 }
