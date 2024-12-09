@@ -1,50 +1,72 @@
-/* Custom CSS for Confirm Delete Guest Page */
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Confirmation Container Styles */
 .confirmation-container {
     max-width: 600px;
     margin: 0 auto;
     padding: 30px;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     font-size: 1.8rem;
     color: #343a40;
+    margin-bottom: 20px;
 }
 
+/* Button Styles */
 .btn {
     width: auto;
-    padding: 10px 20px;
+    padding: 12px 20px;
     font-size: 1rem;
-}
-
-.btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
-}
-
-.btn-danger:hover {
-    background-color: #c82333;
-    border-color: #bd2130;
-}
-
-.btn-secondary {
-    background-color: #6c757d;
-    border-color: #6c757d;
-}
-
-.btn-secondary:hover {
-    background-color: #5a6268;
-    border-color: #545b62;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn i {
     margin-right: 8px;
 }
 
+/* Danger Button */
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    transform: scale(1.05);
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+    transform: scale(1.05);
+}
+
+/* Link Styles */
 a {
     text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
 }
 
 a:hover {
@@ -54,4 +76,11 @@ a:hover {
 /* Optional: Add margin to separate buttons */
 .mb-4 {
     margin-bottom: 20px;
+}
+
+/* Add padding to the container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
