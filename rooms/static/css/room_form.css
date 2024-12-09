@@ -120,3 +120,34 @@ a.btn:hover {
         transform: translateY(0);
     }
 }
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .form-control {
+        font-size: 0.9rem;
+        height: 40px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    a.btn {
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+    }
+}
