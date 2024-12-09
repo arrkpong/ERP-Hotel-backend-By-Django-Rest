@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static 'css/staff_form.css' %}">
     
     <div class="container mt-4">
-        <h1 class="text-center">{% if form.instance.pk %}Edit Staff{% else %}New Staff{% endif %}</h1>
+        <h1 class="text-center">{% if form.instance.pk %}Edit Guest{% else %}New Guest{% endif %}</h1>
         
         <form method="post">
             {% csrf_token %}
